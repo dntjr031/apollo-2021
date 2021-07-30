@@ -1,0 +1,21 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: Query
+}
+
+type Movie {
+    description_intro: String
+    genres: [String]
+    id: Int!
+    language: String
+    medium_cover_image: String
+    rating: Float
+    title: String!
+}
+
+type Query {
+    movie(id: Int!): Movie
+    movies(limit: Int, rating: Float): [Movie]!
+    suggestions(id: Int!): [Movie]!
+}
