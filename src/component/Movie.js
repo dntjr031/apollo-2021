@@ -4,6 +4,8 @@ import { gql } from "apollo-boost";
 import { useMutation } from "@apollo/react-hooks";
 
 const LIKE_MOVIE = gql`
+  directive @client on FIELD
+
   mutation likeMovie($id: Int!) {
     likeMovie(id: $id) @client
   }
